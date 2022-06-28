@@ -200,10 +200,19 @@
   }
 
 
-  #projectstop5{
+  #Startcampaign{
     padding: 5rem;
   }
 
+  #campinfo{
+    color: #750550;
+  }
+
+
+
+#startcampform{
+    padding: 3rem;
+}
 
   #pro2{
     height: 18rem;
@@ -228,3 +237,79 @@
 
  
 
+.label1{
+    color: #750550;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+
+#editbar{
+padding: 1rem;
+height: 5rem;
+background-color: black;
+color: wheat;
+}
+
+
+#editbar a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+#editbar a:hover{
+    color: #750550;
+}
+
+
+#editbar i{
+    font-size: 1.5rem;
+}
+
+#username h3{
+    color: #750550;
+}
+
+#navbar2{
+    /* height: 35rem; */
+}
+
+#navbar2 a{
+    font-size: 1.5rem;
+    color: black;
+    text-decoration:solid;
+}
+#navbar2 a:hover{
+    
+    color: #750550;
+}
+
+
+#aboutme {
+    padding: 5rem;
+
+
+}
+
+#aboutme h2{
+    color: #750550;
+
+
+}
+
+
+#aboutme p{
+    color: #750550;
+    font-size: 1.25rem;
+
+
+}
+
+
+#mycamp{
+    padding: 3rem;
+   
+}
