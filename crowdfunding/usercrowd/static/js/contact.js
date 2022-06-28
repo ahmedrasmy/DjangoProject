@@ -39,14 +39,14 @@ fullname.addEventListener("blur",function(){
     this.style.border="2px solid red"
 
 
-    var namereg=/^[a-zA-Z]{8,16}$/i
+    var namereg=/^[a-zA-Z]{3,16}$/i
     var namevalid=namereg.test(fullname.value)
 
     if(!namevalid){
         errorname.style.display="block";
         errorname.style.color="red";
 
-        errorname.innerHTML="name should be beteen 8 and 16 char"
+        errorname.innerHTML="name should be between 3 and 16 char"
         this.focus()
     }else{
 
@@ -67,14 +67,14 @@ user.addEventListener("blur",function(){
     this.style.border="2px solid red"
 
 
-    var userreg=/^[a-zA-Z]{6,14}$/i
+    var userreg=/^[a-zA-Z]{3,14}$/i
     var uservalid=userreg.test(this.value)
 
     if(!uservalid){
         erroruser.style.display="block";
         erroruser.style.color="red";
 
-        erroruser.innerHTML="user-name should be beteen 6 and 14 char"
+        erroruser.innerHTML="user-name should be beteen 3 and 14 char"
         this.focus()
     }else{
 
