@@ -13,6 +13,7 @@ class Usercrowd(models.Model):
     birthdate = models.DateField(null=True)
     country = models.CharField(null=True,max_length=50)
     facebooklink = models.URLField(null=True)
+    is_admin = models.BooleanField(default=False)
 
 
 
@@ -34,3 +35,8 @@ class ProjectsImages(models.Model):
 class ProjectsTages(models.Model):
     tags = models.CharField(max_length=50)
     project = models.ForeignKey(Projects, on_delete=models.CASCADE)
+
+class Category(models.Model):
+    title = models.CharField(max_length=100)
+    image_cat = models.ImageField(upload_to='images/')
+    user = models.ForeignKey(Usercrowd, on_delete=models.CASCADE)

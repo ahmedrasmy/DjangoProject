@@ -44,3 +44,28 @@ def add_project(request):
             return render(request, 'startCampain.html')
     else:
         return redirect('login')
+
+def admin_home(request):
+    if request.session.has_key('user_name'):
+        user = Usercrowd.objects.filter(id=int(request.session['user_id']))[0]
+        if user.is_admin == True:
+            if request.method == 'POST':
+                newcategory = Category.objects.create(
+                    title=request.POST['title'], image_cat = request.FILES['image_cat'],
+                    user=user
+                )
+                return redirect('admin')
+            else:
+                return render(request,'admin.html')
+        else:
+            return render(request, 'notfounderror.html')
+    return redirect('login')
+
+def add5projects(request):
+    return render(request,'add5Projects.html')
+
+def project_reports(request):
+    return render(request,'ProjectsReport.html')
+
+def comments_reports(request):
+    return render(request,'commentsReport.html')
