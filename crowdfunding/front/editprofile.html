@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+  </script>
+  <!-- font awesome  -->
+  <script src="https://kit.fontawesome.com/b5c82d464c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./static/editprofile.css">
+</head>
+</head>
+
+<body>
+  <div class="container-fluid" id="maindiv">
+    <div class="row" id="container-1">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" id="sitename">DONATOR</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active mybuttons" aria-current="page" href="./home.html">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active mybuttons" aria-current="page" href="./profile.html">Profile</a>
+              </li>
+
+
+
+
+
+              <li class="nav-item">
+                <a href="./startCampain.html"><button type="button" class="btn btn-danger" id="startcam">Start a Campaign</button></a>
+                
+              </li>
+
+              <li class="nav-item ms-4">
+                <a class="nav-link mybuttons"  href="#" tabindex="-1">Log out</a>
+              </li>
+
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-danger" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+
+    <!-- Edit bar -->
+
+
+
+    <div id="editbar" class="row">
+      <div class="col-4 row">
+        <i class="fa-solid fa-eye col-2"></i>
+
+        <a class="col-6" href="./profile.html">
+          <p>View my Profile</p>
+        </a>
+
+      </div>
+
+
+
+      <div class="col-4 row">
+        <i class="fa-solid fa-pen-to-square col-2"></i>
+
+        <a class="col-6" href="#">
+          <p>Edit my Profile</p>
+        </a>
+
+      </div>
+
+
+
+
+      <!-- <div class="col-4 row">
+        <i class="fa-solid fa-trash-can col-2"></i>
+        <a id="delete1" class="col-6" href="#"><p>Delete my Profile</p></a>
+
+      </div> -->
+
+
+
+    </div>
+
+    
+       <!-- confirm for delete div -->
+
+        <div id="confirm1" class="row bg-light"  style="display:none;">
+          <h3 class="col-6 p-5 my-5">Are you sure to delete your account??</h3>
+  
+          <br>
+          <br>
+  
+          <div class="row ms-4 p-2">
+            <button id="yes1" class="btn btn-danger m-2 col-1">Yes</button>
+            <button id="no1" class="btn btn-success m-2  col-1">no</button>
+  
+  
+          </div>
+  
+          <hr>
+  
+  
+  
+        </div>
+  
+
+    <!-- name -->
+
+
+    <div id="username" class="row bg-light">
+      <h3 class="col-4 p-5 my-5">Mostafa Masrya</h3>
+
+      <br>
+      <br>
+
+      <hr>
+    </div>
+
+
+
+    <div class="container bg-light" id="div1">
+
+      <p>Basic Info</p>
+
+      <hr>
+
+      <form>
+        <div class="row">
+          <div class="col-7">
+
+
+            <div class="mb-3">
+              <label for="email" class="form-label label1">Email</label>
+              <!-- <input type="email" readonly class="form-control" id="email" aria-describedby="emailHelp"
+                placeholder="Email" value="mostafamasrya@gmail.com"> -->
+
+                <p  class="form-label label1 my-3">mostafamasrya@gmail.com</p>
+
+            </div>
+
+
+            <div class="mb-3">
+              <label for="firstname" class="form-label label1">First Name</label>
+              <input type="text" class="form-control" id="firstname" aria-describedby="emailHelp"
+                placeholder="first name" value="mostafa" >
+
+            </div>
+
+
+            <div class="mb-3">
+              <label for="lastname" class="form-label label1">last Name</label>
+              <input type="text" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="last name"
+                value="masrya">
+
+            </div>
+
+
+
+            <div class="mb-3">
+              <label for="phone" class="form-label label1">Phone</label>
+              <input type="number" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="phone number"
+                value="masrya">
+
+            </div>
+
+
+        
+
+
+            <div class="mb-3">
+              <label for="country" class="form-label label1">Country</label>
+              <input type="text" class="form-control" id="Country" aria-describedby="emailHelp" placeholder="Country">
+
+            </div>
+
+
+            <div class="mb-3">
+              <label for="city" class="form-label label1">City</label>
+              <input type="text" class="form-control" id="city" aria-describedby="emailHelp" placeholder="city">
+
+            </div>
+
+
+
+            <div class="mb-3">
+              <label for="bdate" class="form-label label1">Birth Date</label>
+              <input type="date" class="form-control" id="bdate" aria-describedby="emailHelp" placeholder=" Birth Date">
+
+            </div>
+
+
+
+          </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <!-- story -->
+
+
+
+
+    <div class="container bg-light" id="div2">
+
+      <p>Your Story</p>
+
+      <hr>
+
+
+      <div class="row">
+        <div class="col-8">
+
+
+          <label for="Description" class="form-label label1"> Description</label>
+
+          <textarea name="Description" id="Description" cols="80" rows="5"></textarea>
+
+
+
+          <label for="about" class="form-label label1">About Me</label>
+
+          <textarea name="aboutme" id="about" cols="80" rows="5"></textarea>
+
+
+
+
+
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <!-- your photos -->
+
+
+
+    <div class="container bg-light" id="div3">
+
+      <p>Your Photos</p>
+
+      <hr>
+
+
+      <div class="row">
+        <div class="col-8">
+
+          <div>
+            <img src="./images/edu2.jpeg" alt="">
+          </div>
+
+
+          <button class="btn btn-danger my-4">Add Photo</button>
+
+          <div>
+            <img id="editedimg" src="./images/profilepic.jpeg" alt="">
+
+
+          </div>
+
+          <button class="btn btn-danger my-4">Add Photo</button>
+
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- your links -->
+
+
+    <div class="container bg-light" id="div4">
+
+      <p>Your Links</p>
+
+      <hr>
+
+
+      <div class="row">
+        <div class="col-8">
+
+
+
+          <div class="mb-3">
+            <label for="faceLink" class="form-label label1">Facebook Link</label>
+            <input type="url" class="form-control" id="faceLink" aria-describedby="emailHelp"
+              placeholder="http//www.Facebook.com/fn.page">
+
+          </div>
+
+
+
+
+
+          <div class="mb-3">
+            <label for="twiteerLink" class="form-label label1">Twitter Link</label>
+            <input type="url" class="form-control" id="twiteerLink" aria-describedby="emailHelp"
+              placeholder="http//www.twitter.com/fn.page">
+
+          </div>
+
+
+
+
+
+          <div class="mb-3">
+            <label for="youtubeLink" class="form-label label1">Youtube Link</label>
+            <input type="url" class="form-control" id="youtubeLink" aria-describedby="emailHelp"
+              placeholder="http//www.Youtube.com/fn.channel">
+
+          </div>
+
+
+
+          <div class="mb-3">
+            <label for="webLink" class="form-label label1">Website Link</label>
+            <input type="url" class="form-control" id="webLink" aria-describedby="emailHelp"
+              placeholder="http//www.website.com">
+
+          </div>
+
+
+
+
+
+
+
+          <button class="btn btn-danger my-4">Add Custom Link</button>
+
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="mt-5">
+      <div style="display:flex" class="justify-content-end">
+        <button type="submit" class="btn btn-danger my-4">Save</button>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- footer -->
+
+  <div id="footer">
+    <div id="div1" class="row">
+      <div class="col-4">
+        <h4>HOW IT WORKS</h4>
+        <p>Campaign</p>
+        <p>InDemand</p>
+        <p>Enterprise</p>
+        <p>Fees</p>
+
+        <h4>ABOUT US</h4>
+        <P>what we do</P>
+        <p>press</p>
+        <p>about us</p>
+
+      </div>
+
+
+
+      <div class="col-2">
+        <h4>RESOUCES</h4>
+        <p>Trust & Saftey</p>
+        <p>Experts</p>
+        <p>Help & Support</p>
+
+
+
+      </div>
+
+      <div class="col-6">
+        <h4>FOLLOW US</h4>
+
+        <hr>
+
+        <div class="row">
+          <i class="fa-brands fa-facebook col-2"></i>
+          <i class="fa-solid fa-envelope col-2"></i>
+          <i class="fa-brands fa-twitter col-2"></i>
+          <i class="fa-brands fa-linkedin col-2"></i>
+          <i class="fa-solid fa-wifi col-2"></i>
+
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <div id="div2">
+      <hr>
+      <div class="row">
+        <p class="col-1">Terms of Use</p>
+        <p class="col-1">Privicy Policy</p>
+        <p class="col-1">cookie Policy</p>
+        <p class="col-6">Accessbility</p>
+        <div class="col-3">
+          <p>All Rights Served@DENATOR</p>
+          <a href="#">DONATOR</a>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+  <script src="./static/editprofile.js"></script>
+</body>
+
+</html>
