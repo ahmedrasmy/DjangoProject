@@ -40,3 +40,33 @@ class Category(models.Model):
     title = models.CharField(max_length=100)
     image_cat = models.ImageField(upload_to='images/')
     user = models.ForeignKey(Usercrowd, on_delete=models.CASCADE)
+
+
+class Donation(models.Model):
+    project = models.ForeignKey(Projects, on_delete=models.CASCADE)
+    user = models.ForeignKey(Usercrowd, on_delete=models.CASCADE)
+    donation_value = models.IntegerField()
+
+
+class Rate(models.Model):
+    project = models.ForeignKey(Projects, on_delete=models.CASCADE)
+    user = models.ForeignKey(Usercrowd, on_delete=models.CASCADE)
+    rate = models.IntegerField()
+
+
+class Comment(models.Model):
+    user = models.ForeignKey(Usercrowd, on_delete=models.CASCADE)
+    project = models.ForeignKey(Projects, on_delete=models.CASCADE)
+    comment = models.TextField(default='')
+
+
+class CommentReports(models.Model):
+    comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
+    user = models.ForeignKey(Usercrowd, on_delete=models.CASCADE)
+
+
+
+class ProjectReports(models.Model):
+    project = models.ForeignKey(Projects, on_delete=models.CASCADE)
+    message = models.CharField(max_length=100)
+    user = models.ForeignKey(Usercrowd, on_delete=models.CASCADE)

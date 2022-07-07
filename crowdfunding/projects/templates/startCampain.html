@@ -25,12 +25,9 @@ Add Campain
                 <div class="mb-3">
                     <label for="categ" class="form-label label1">Category</label>
                     <select name="category" id="categ" class="form-control">
-                        <option value="education">Education</option>
-                        <option value="food">Food</option>
-                        <option value="health">Health</option>
-                        <option value="hanger">Hanger</option>
-                        <option value="orphans">Orphans</option>
-                        <option value="Poverty">Poverty</option>
+                        {% for category in categories %}
+                        <option value="{{category.id}}">{{category.title}}</option>
+                        {% endfor %}
                     </select>
 
 

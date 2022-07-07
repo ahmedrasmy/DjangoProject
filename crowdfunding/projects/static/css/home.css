@@ -200,26 +200,23 @@
   }
 
 
-  #projectstop5{
+  .projectstop5{
     padding: 5rem;
   }
 
 
-  #pro2{
+  .pro2{
     height: 18rem;
   }
 
 
-  #prorow1{
+  .prorow1{
     padding-left: 10rem;
     margin-bottom: 2rem;
   }
 
 
-  #prorow2{
-    padding-left: 10rem;
-    margin-bottom: 2rem;
-  }
+
 
   #pro4{
     height: 15rem;
